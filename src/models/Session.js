@@ -13,12 +13,9 @@ var SessionSchema  = new Schema({
             ref: 'User'
         }]
     },
-    apiAiSessionId: {
-        type: String
-    },
     active: {
         type: Boolean,
-        default: true
+        default: false
     },
     createdTimestamp: {
         type: Date,

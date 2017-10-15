@@ -30,10 +30,9 @@ module.exports = {
 	},
 
 
-    createSession: function(uuid, userId) {
+    createSession: function(userIds) {
     	var newSession = {
-    		apiAiSessionId: uuid,
-	        users: [ userId ]
+	        users: userIds
 	    }
 	    var session = new SessionModel(newSession);
         session.save(function(err, sessionCreated) {
@@ -57,6 +56,7 @@ module.exports = {
                 cb(err);
             } else if (usersFound.length > 0 && typeof usersFound[0] !== 'undefined') {
             	var i = Math.floor((Math.random() * usersFound.length) + 0);
+            	module.exports.createSession([senderId, usersFound[i].fbId]);
             	console.log("selecting i:",i);
             	cb(usersFound[i].fbId);
             } else {
