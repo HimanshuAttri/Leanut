@@ -323,26 +323,29 @@ class FacebookBot {
         const text = this.getEventText(event);
 
         if (text) {
-
-            // Handle a text message from this sender
-            if (!this.sessionIds.has(sender)) {
-                //var uuid = uuid.v4();
-                //userController.createSession(uuid, sender);
-                this.sessionIds.set(sender, uuid.v4());
-            }
-
             console.log("Text", text);
-            //send user's text to api.ai service
-            let apiaiRequest = this.apiAiService.textRequest(text,
-                {
-                    sessionId: this.sessionIds.get(sender),
-                    originalRequest: {
-                        data: event,
-                        source: "facebook"
-                    }
-                });
+            if (text == "find human") {
+                this.doTextResponse(sender, "Sure, contacting human");
+            } else {
+                // Handle a text message from this sender
+                if (!this.sessionIds.has(sender)) {
+                    //var uuid = uuid.v4();
+                    //userController.createSession(uuid, sender);
+                    this.sessionIds.set(sender, uuid.v4());
+                }
 
-            this.doApiAiRequest(apiaiRequest, sender);
+                //send user's text to api.ai service
+                let apiaiRequest = this.apiAiService.textRequest(text,
+                    {
+                        sessionId: this.sessionIds.get(sender),
+                        originalRequest: {
+                            data: event,
+                            source: "facebook"
+                        }
+                    });
+
+                this.doApiAiRequest(apiaiRequest, sender);
+            }
         }
     }
 
