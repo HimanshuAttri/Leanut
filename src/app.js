@@ -329,17 +329,18 @@ class FacebookBot {
         if (text) {
             console.log("Text", text);
             if (text == "find human") {
+                var self = this;
                 try {
-                    this.userController.contactHuman(sender, function(userId) {
+                    userController.contactHuman(sender, function(userId) {
                         if (userId == -1) {
-                            this.doTextResponse(sender, "You are the only user on our platform.");
+                            self.doTextResponse(sender, "You are the only user on our platform.");
                         } else {
-                            this.doTextResponse(userId, "A fellow human is feeling low. Would you like to chat with them anonymously?");
-                            this.doTextResponse(sender, "Sure, contacting human");
+                            self.doTextResponse(userId, "A fellow human is feeling low. Would you like to chat with them anonymously?");
+                            self.doTextResponse(sender, "Sure, contacting human");
                         }
                     });
                 } catch(e) {
-                    this.doTextResponse(sender, "Unable to find other user.");
+                    self.doTextResponse(sender, "Unable to find other user.");
                 }
             } else {
                 // Handle a text message from this sender
