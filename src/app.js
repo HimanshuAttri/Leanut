@@ -312,6 +312,7 @@ class FacebookBot {
                 userController.createUser({ fbId: sender }, function(mongoResponse) {
                     console.log("mongo ", mongoResponse);
                 });
+                console.log("creating user");
             } catch(e) {
                 console.log(e);
             }
