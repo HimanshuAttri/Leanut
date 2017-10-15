@@ -176,11 +176,19 @@ class FacebookBot {
                         facebookMessage.quick_replies = [];
 
                         message.replies.forEach((r) => {
-                            facebookMessage.quick_replies.push({
-                                content_type: "text",
-                                title: r,
-                                payload: r
-                            });
+                            if (typeof r == "string") {
+                                facebookMessage.quick_replies.push({
+                                    content_type: "text",
+                                    title: r,
+                                    payload: r
+                                });
+                            } else {
+                                facebookMessage.quick_replies.push({
+                                    content_type: "text",
+                                    title: r.text,
+                                    payload: r.payload
+                                });
+                            }
                         });
 
                         facebookMessages.push(facebookMessage);
@@ -340,7 +348,10 @@ class FacebookBot {
                                 [{
                                     type: 2,
                                     title: "A fellow human is feeling low. Would you like to chat with them anonymously?",
-                                    replies: ['Yes', 'No']
+                                    replies: [
+                                        { text: 'Yes', payload: "HELP_YES"},
+                                        { text: 'No', payload: "HELP_NO"}
+                                    ]
                                 }])
                             self.doTextResponse(sender, "Sure, contacting human");
                         }
