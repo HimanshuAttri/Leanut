@@ -335,7 +335,7 @@ class FacebookBot {
         const text = this.getEventText(event);
 
         if (text) {
-            console.log("Text", text);
+            console.log("Text", text, "quick r", event.message.quick_reply);
             if (text == "find human") {
                 var self = this;
                 try {
