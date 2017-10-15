@@ -24,7 +24,7 @@ Facebook Messenger - The UI
 
 
 
-### Initially Victimwill contact bot
+### Victim will contact bot
 ![lean1](https://user-images.githubusercontent.com/12981490/31587409-0b26eaf8-b1ff-11e7-97ea-325e412bf220.png)
 
 
@@ -45,9 +45,20 @@ if user wants to help he will say 'yes' to get connected
 
 ![lean5](https://user-images.githubusercontent.com/12981490/31587415-18d94bdc-b1ff-11e7-9432-769e666bdc0a.png)
 
-
+### Now both are connected 
 
 ![lean6](https://user-images.githubusercontent.com/12981490/31587416-195e53b8-b1ff-11e7-8833-25e918388f2b.png)
+
+
+For the time being if users want to sand message to each other the '/r' should be used in the begaining of the message
+
+![leanx](https://user-images.githubusercontent.com/12981490/31587686-a2b3b438-b203-11e7-8926-63168e9278e6.png)
+
+
+##Works to be done
+
+-removing '/r' operations with a normal send
+####Initially app cannot be used by normal users, It needs to be authorized by facebook before deloying fully online the process will take time,hence for now it works only on my two accounts with fb developer keys, I will apply for autherisation of the app so that any fb user can use it
 
 
 
