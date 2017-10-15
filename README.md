@@ -15,6 +15,33 @@ Peaople who need help and those who want to help people in need are now not requ
 
 ## Technology Used
 
+DialogFlow- For the Bot
+Heroku server - For users connection
+Facebook Messenger - The UI
+
+
+## Usage
+
+
+
+### Initially Victimwill contact bot
+![lean1](https://user-images.githubusercontent.com/12981490/31587409-0b26eaf8-b1ff-11e7-97ea-325e412bf220.png)
+
+
+### Leanut will advice victim to keep him calm
+
+![lean2](https://user-images.githubusercontent.com/12981490/31587410-0e0638b4-b1ff-11e7-8359-9c2b705aea5f.png)
+
+
+### If victim want to talk to a real human then
+
+victim will say ####'find human'
+
+
+
+![lean3](https://user-images.githubusercontent.com/12981490/31587414-17002bd2-b1ff-11e7-9f44-42e36b05cdfd.png)
+![lean5](https://user-images.githubusercontent.com/12981490/31587415-18d94bdc-b1ff-11e7-9432-769e666bdc0a.png)
+![lean6](https://user-images.githubusercontent.com/12981490/31587416-195e53b8-b1ff-11e7-8833-25e918388f2b.png)
 
 
 
