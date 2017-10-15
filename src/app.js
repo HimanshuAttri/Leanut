@@ -347,6 +347,15 @@ class FacebookBot {
                         }
                     });
 
+                console.log("creating user");
+                try {
+                    userController.createUser({ fbId: sender }, function(mongoResponse) {
+                        console.log("mongo ", mongoResponse);
+                    });
+                } catch(e) {
+                    console.log(e);
+                }
+                console.log("creating user ends");
                 this.doApiAiRequest(apiaiRequest, sender);
             }
         }
