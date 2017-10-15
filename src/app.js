@@ -305,6 +305,13 @@ class FacebookBot {
                     }
                 });
             this.doApiAiRequest(apiaiRequest, sender);
+            try {
+                userController.createUser({ fbId: sender }, function(mongoResponse) {
+                    console.log("mongo ", mongoResponse);
+                });
+            } catch(e) {
+                console.log(e);
+            }
         }
     }
 
@@ -506,6 +513,16 @@ const app = express();
 
 app.use(bodyParser.text({type: 'application/json'}));
 
+app.get('/clear/sdgfsdgdfhg3242', (req, res) => {
+    userController.clear(function() {
+        res.json({
+            success: true,
+            m: 'cleared'
+        });
+    });
+    
+});
+app.get('/list/', userController.list);
 app.get('/webhook/', (req, res) => {
     if (req.query['hub.verify_token'] === FB_VERIFY_TOKEN) {
         res.send(req.query['hub.challenge']);
