@@ -51,7 +51,7 @@ module.exports = {
     },
 
     contactHuman: function(senderId, cb) {
-    	UserModel.findOne({ fbId : { $ne: senderId }}, function(err, usersFound) {
+    	UserModel.find({ fbId : { $ne: senderId }}, function(err, usersFound) {
     		console.log(usersFound);
             if (err) {
                 cb(err);
