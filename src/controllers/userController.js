@@ -50,15 +50,15 @@ module.exports = {
 		});
     },
 
-    contactHuman: function(senderId) {
+    contactHuman: function(senderId, cb) {
     	UserModel.findOne({ fbId : { $ne: senderId }}, function(err, usersFound) {
             if (err) {
                 cb(err);
             } else if (usersFound.length > 0 && typeof usersFound[0] !== 'undefined') {
             	var i = Math.floor((Math.random() * usersFound.length) + 0);
-            	return usersFound[i].fbId;
+            	cb(usersFound[i].fbId);
             } else {
-            	return -1;
+            	cb(-1);
             }
         });
     },
