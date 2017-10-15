@@ -50,6 +50,19 @@ module.exports = {
 		});
     },
 
+    contactHuman: function(senderId) {
+    	UserModel.findOne({ fbId : { $ne: senderId }}, function(err, usersFound) {
+            if (err) {
+                cb(err);
+            } else if (usersFound.length > 0 && typeof usersFound[0] !== 'undefined') {
+            	var i = Math.floor((Math.random() * usersFound.length) + 0);
+            	return usersFound[i].fbId;
+            } else {
+            	return -1;
+            }
+        });
+    },
+
 	list: function(req, res) {
 		UserModel.find({}, function(err, u) {
 			SessionModel.find({}, function(err, s) {
