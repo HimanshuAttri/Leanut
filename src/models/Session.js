@@ -13,11 +13,21 @@ var SessionSchema  = new Schema({
             ref: 'User'
         }]
     },
+    apiAiSessionId: {
+        type: String
+    },
+    active: {
+        type: Boolean,
+        default: true
+    },
     createdTimestamp: {
         type: Date,
         default: Date.now
     }
 });
+SessionSchema.pre('save', function(next) {
+    this.model('Session').update({ users: this._id }, { $set: { active: false }}, next);
+})
 
 module.exports  = mongoose.model(
     'Session',

@@ -285,6 +285,7 @@ class FacebookBot {
         return null;
     }
 
+
     processFacebookEvent(event) {
         const sender = event.sender.id.toString();
         const eventObject = this.getFacebookEvent(event);
@@ -293,6 +294,8 @@ class FacebookBot {
 
             // Handle a text message from this sender
             if (!this.sessionIds.has(sender)) {
+                //var uuid = uuid.v4();
+                //userController.createSession(uuid, sender);
                 this.sessionIds.set(sender, uuid.v4());
             }
 
@@ -323,6 +326,8 @@ class FacebookBot {
 
             // Handle a text message from this sender
             if (!this.sessionIds.has(sender)) {
+                //var uuid = uuid.v4();
+                //userController.createSession(uuid, sender);
                 this.sessionIds.set(sender, uuid.v4());
             }
 
@@ -513,14 +518,13 @@ const app = express();
 
 app.use(bodyParser.text({type: 'application/json'}));
 
-app.get('/clear/sdgfsdgdfhg3242', (req, res) => {
+app.get(process.env.CLEAR_DB_PATH, function(req, res) {
     userController.clear(function() {
         res.json({
             success: true,
             m: 'cleared'
         });
-    });
-    
+    });   
 });
 app.get('/list/', userController.list);
 app.get('/webhook/', (req, res) => {
