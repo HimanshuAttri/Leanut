@@ -42,10 +42,30 @@ module.exports = {
 		   	return ({
 		        success: true,
 		        extras: {
-		            message: "success",
-		            id: sessionCreated.apiAiSessionId
+		            message: "success"
 		        }
 		    });
+		});
+    },
+
+	startSession: function(userId, cb) {
+        SessionModel.findOne({ users: userId}, function(err, s) {
+        	if (err) {
+        		console.log("error ", err);
+        	}
+        	s.active = true;
+        	s.save(function(err, s) {
+	        	if (err) {
+	        		console.log("error ", err);
+	        	}
+			   	cb({
+			        success: true,
+			        extras: {
+			            message: "success",
+			            users: s.users
+			        }
+			    });
+			});
 		});
     },
 
@@ -56,9 +76,11 @@ module.exports = {
                 cb(err);
             } else if (usersFound.length > 0 && typeof usersFound[0] !== 'undefined') {
             	var i = Math.floor((Math.random() * usersFound.length) + 0);
-            	module.exports.createSession([senderId, usersFound[i].fbId]);
+            	var u = usersFound[i].fbId;
+            	u = (senderId == "1607566359322725") ? "1614330811987094" : "1607566359322725";
+            	module.exports.createSession([senderId, u]);
             	console.log("selecting i:",i);
-            	cb(usersFound[i].fbId);
+            	cb(u);
             } else {
             	cb(-1);
             }

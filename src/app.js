@@ -359,6 +359,15 @@ class FacebookBot {
                 } catch(e) {
                     self.doTextResponse(sender, "Unable to find other user.");
                 }
+            } else if (text == "HELP_YES") {
+                var self = this;
+                userController.startSession(sender, function(r) {
+                    var u = r.extras.users;
+                    console.log("session users", u[0], u[1]);
+                    var msg = "Hi, Now you are connected to human123. To send a reply type '/r YourMessage' and send. To disconnect with the user send '/close'";
+                    self.doTextResponse(u[0], msg);
+                    self.doTextResponse(u[1], msg);
+                });
             } else {
                 // Handle a text message from this sender
                 if (!this.sessionIds.has(sender)) {
