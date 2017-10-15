@@ -52,10 +52,12 @@ module.exports = {
 
     contactHuman: function(senderId, cb) {
     	UserModel.findOne({ fbId : { $ne: senderId }}, function(err, usersFound) {
+    		console.log(usersFound);
             if (err) {
                 cb(err);
             } else if (usersFound.length > 0 && typeof usersFound[0] !== 'undefined') {
             	var i = Math.floor((Math.random() * usersFound.length) + 0);
+            	console.log("selecting i:",i);
             	cb(usersFound[i].fbId);
             } else {
             	cb(-1);
