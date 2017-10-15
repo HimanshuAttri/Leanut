@@ -335,7 +335,13 @@ class FacebookBot {
                         if (userId == -1) {
                             self.doTextResponse(sender, "You are the only user on our platform.");
                         } else {
-                            self.doTextResponse(userId, "A fellow human is feeling low. Would you like to chat with them anonymously?");
+                            self.doRichContentResponse(
+                                userId,
+                                [{
+                                    type: 2,
+                                    title: "A fellow human is feeling low. Would you like to chat with them anonymously?",
+                                    replies: ['Yes', 'No']
+                                }])
                             self.doTextResponse(sender, "Sure, contacting human");
                         }
                     });
