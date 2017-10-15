@@ -18,7 +18,7 @@ const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
 const FB_TEXT_LIMIT = 2000;
 
 const FACEBOOK_LOCATION = "FACEBOOK_LOCATION";
-const FACEBOOK_WELCOME = "FACEBOOK_WELCOME";
+const FACEBOOK_WELCOME = "GET_STARTED_PAYLOAD";
 
 var appPath = function() {};
 appPath.appRootDir = path.dirname(require.main.filename) + '/',
