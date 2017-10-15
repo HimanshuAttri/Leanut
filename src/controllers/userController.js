@@ -69,6 +69,43 @@ module.exports = {
 		});
     },
 
+    getSessionReciepent: function(userId, cb) {
+        SessionModel.findOne({ users: userId}, function(err, s) {
+        	if (err) {
+        		console.log("error ", err);
+        	}
+        	var users = s.users;
+        	var i = users.indexOf(userId);
+        	if (i > -1) {
+			    users.splice(i, 1);
+			}
+		   	cb({
+		   		id: users[0]
+		    });
+		});
+    },
+
+    closeSession: function(userId, cb) {
+        SessionModel.findOne({ users: userId}, function(err, s) {
+        	if (err) {
+        		console.log("error ", err);
+        	}
+        	s.active = false;
+        	s.save(function(err, s) {
+	        	if (err) {
+	        		console.log("error ", err);
+	        	}
+			   	cb({
+			        success: true,
+			        extras: {
+			            message: "success",
+			            users: s.users
+			        }
+			    });
+			});
+		});
+    },
+
     contactHuman: function(senderId, cb) {
     	UserModel.find({ fbId : { $ne: senderId }}, function(err, usersFound) {
     		console.log(usersFound);

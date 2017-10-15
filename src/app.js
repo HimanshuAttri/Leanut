@@ -368,6 +368,21 @@ class FacebookBot {
                     self.doTextResponse(u[0], msg);
                     self.doTextResponse(u[1], msg);
                 });
+            } else if (text.startsWith("/r ")) {
+                var self = this;
+                userController.getSessionReciepent(sender, function(r) {
+                    console.log("reply to:", r);
+                    self.doTextResponse(r.id, "Human123 says: " + text.replace("/r ", ""));
+                });
+            } else if (text == "/close") {
+                var self = this;
+                userController.closeSession(sender, function(r) {
+                    var u = r.extras.users;
+                    console.log("session users", u[0], u[1]);
+                    var msg = "You are now disconnected.";
+                    self.doTextResponse(u[0], msg);
+                    self.doTextResponse(u[1], msg);
+                });
             } else {
                 // Handle a text message from this sender
                 if (!this.sessionIds.has(sender)) {
