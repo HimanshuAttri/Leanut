@@ -40,6 +40,7 @@ class FacebookBot {
     constructor() {
         this.apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSource: "fb"});
         this.sessionIds = new Map();
+        this.userController = require(appPath.modelsDir + 'userController');
         this.messagesDelay = 200;
     }
 
@@ -329,7 +330,7 @@ class FacebookBot {
             console.log("Text", text);
             if (text == "find human") {
                 try {
-                    userController.contactHuman(sender, function(userId) {
+                    this.userController.contactHuman(sender, function(userId) {
                         if (userId == -1) {
                             this.doTextResponse(sender, "You are the only user on our platform.");
                         } else {
