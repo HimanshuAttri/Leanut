@@ -35,12 +35,18 @@ Facebook Messenger - The UI
 
 ### If victim want to talk to a real human then
 
-victim will say ####'find human'
-
-
+victim will say'find human'
 
 ![lean3](https://user-images.githubusercontent.com/12981490/31587414-17002bd2-b1ff-11e7-9f44-42e36b05cdfd.png)
+
+### Leanut finds another user and asks him
+
+if user wants to help he will say 'yes' to get connected 
+
 ![lean5](https://user-images.githubusercontent.com/12981490/31587415-18d94bdc-b1ff-11e7-9432-769e666bdc0a.png)
+
+
+
 ![lean6](https://user-images.githubusercontent.com/12981490/31587416-195e53b8-b1ff-11e7-8833-25e918388f2b.png)
 
 
