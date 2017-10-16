@@ -1,13 +1,13 @@
 # Leanut - The Social Bot
 
 
-A social chatbot for people in depression and suicidal condition. Leanut advices the victim accordin to his state of mind. Leanut also provides a human interaction to victimby search one of such users who are willing to help the victim.
+A social chatbot for people in depression and suicidal condition. Leanut advices the victim accordin to his state of mind. Leanut also provides a human interaction to victim by search one of such users who are willing to help the victim.
 
 ## Concept
 
 These day depression and suicidal tendencies had increased a lot. A victim who is on the verge to end his life will not want to interact with a bot, knowing bot can never understand his/her feelings, bot really can't accuately guss victims mood in such crutial time and hence we should not build a platform entirely based on a learned bot because highly learned AIs are also not so good at emotional inteligence.
 
-Hence ####Leanut provides personal assitance and advices victim initially and even then if a user wants to have a chat with a real human he can call for it. 
+Hence Leanut provides personal assitance and advices victim initially and even then if a user wants to have a chat with a real human he can call for it. 
 ### Leanut is a facebook bot, and fb network is so huge, hence if a person who is depressed and one of another person who wants to help someone can join each other in a chat anonymously. Being anonymous the user can share his/her thoughts without any fear
 
 Peaople who need help and those who want to help people in need are now not required to go a perticular site or forum to help or get helped, ### Leanut will provide a anonymous connection over facebook.
@@ -50,7 +50,7 @@ if user wants to help he will say 'yes' to get connected
 ![lean6](https://user-images.githubusercontent.com/12981490/31587416-195e53b8-b1ff-11e7-8833-25e918388f2b.png)
 
 
-For the time being if users want to sand message to each other the '/r' should be used in the begaining of the message
+For the time being if users want to send message to each other the '/r' should be used in the begaining of the message
 
 ![leanx](https://user-images.githubusercontent.com/12981490/31587686-a2b3b438-b203-11e7-8926-63168e9278e6.png)
 
