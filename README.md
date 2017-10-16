@@ -49,31 +49,7 @@ if user wants to help he will say 'yes' to get connected
 
 ![lean5](https://user-images.githubusercontent.com/12981490/31587415-18d94bdc-b1ff-11e7-9432-769e666bdc0a.png)
 
-### Now both are connected 
 
-
-
-
-### Victim will contact bot
-![lean1](https://user-images.githubusercontent.com/12981490/31587409-0b26eaf8-b1ff-11e7-97ea-325e412bf220.png)
-
-
-### Leanut will advice victim to keep him calm
-
-![lean2](https://user-images.githubusercontent.com/12981490/31587410-0e0638b4-b1ff-11e7-8359-9c2b705aea5f.png)
-
-
-### If victim want to talk to a real human then
-
-victim will say'find human'
-
-![lean3](https://user-images.githubusercontent.com/12981490/31587414-17002bd2-b1ff-11e7-9f44-42e36b05cdfd.png)
-
-### Leanut finds another user and asks him
-
-if user wants to help he will say 'yes' to get connected 
-
-![lean5](https://user-images.githubusercontent.com/12981490/31587415-18d94bdc-b1ff-11e7-9432-769e666bdc0a.png)
 
 ### Now both are connected 
 
