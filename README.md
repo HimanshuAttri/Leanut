@@ -58,7 +58,7 @@ For the time being if users want to send message to each other the '/r' should b
 ##Works to be done
 
 -removing '/r' operations with a normal send
-#### Initially app cannot be used by normal users, It needs to be authorized by facebook before deloying fully online the process will take time,hence for now it works only on my two accounts with fb developer keys, I will apply for autherisation of the app so that any fb user can use it
+#### Initially app cannot be used by normal users, It needs to be authorized by facebook before deploying fully online the process will take time,hence for now it works only on my two accounts with fb developer keys, I will apply for autherisation of the app so that any fb user can use it
 
 
 
