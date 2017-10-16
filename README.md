@@ -64,6 +64,8 @@ if user wants to help he will say 'yes' to get connected
 ## Works to be done
 
 -removing '/r' operations with a normal send
+#### For now to send to the peson connected rather then the bot '/r' is required to specify the msg is for human I will added a simpler check in future of smooth usage
+
 
 #### Initially app cannot be used by normal users, It needs to be authorized by facebook before deploying fully online the process will take time,hence for now it works only on my two accounts with fb developer keys, I will apply for autherisation of the app so that any fb user can use it.
 
