@@ -1,5 +1,7 @@
-# Leanut - The Social Bot
+# Leanut - The Social Bot <Hack4Nsit, Team: BitWalker>
 
+
+### Note: To be functional for every user I need permissions from fb it is taking time I just add developer keys of my two fb accounts so that I can perform demo for now. 
 
 A social chatbot for people in depression and suicidal condition. Leanut advices the victim accordin to his state of mind. Leanut also provides a human interaction to victim by search one of such users who are willing to help the victim.
 
@@ -7,17 +9,19 @@ A social chatbot for people in depression and suicidal condition. Leanut advices
 
 These day depression and suicidal tendencies had increased a lot. A victim who is on the verge to end his life will not want to interact with a bot, knowing bot can never understand his/her feelings, bot really can't accuately guss victims mood in such crutial time and hence we should not build a platform entirely based on a learned bot because highly learned AIs are also not so good at emotional inteligence.
 
+
 Hence Leanut provides personal assitance and advices victim initially and even then if a user wants to have a chat with a real human he can call for it. 
-### Leanut is a facebook bot, and fb network is so huge, hence if a person who is depressed and one of another person who wants to help someone can join each other in a chat anonymously. Being anonymous the user can share his/her thoughts without any fear
+
+### Leanut is a facebook page  bot, and fb network is so huge, hence if a person who is depressed and one of another person who wants to help someone can join each other in a chat anonymously. Being anonymous the user can share his/her thoughts without any fear
 
 Peaople who need help and those who want to help people in need are now not required to go a perticular site or forum to help or get helped, ### Leanut will provide a anonymous connection over facebook.
 
 
 ## Technology Used
 
-DialogFlow- For the Bot
-Heroku server - For users connection
-Facebook Messenger - The UI
+DialogFlow- For the bot logics and facebook messenger connection
+Heroku server - For users connection. the nodejs structure which is connecting two users on their request anonymously
+
 
 
 ## Usage
@@ -59,14 +63,13 @@ For the time being if users want to send message to each other the '/r' should b
 
 ![uu1](https://user-images.githubusercontent.com/12981490/31615803-6d6b46a6-b2a8-11e7-9d94-7992f5495b7e.png)
 
-
-
-
-
 ##Works to be done
 
 -removing '/r' operations with a normal send
-#### Initially app cannot be used by normal users, It needs to be authorized by facebook before deploying fully online the process will take time,hence for now it works only on my two accounts with fb developer keys, I will apply for autherisation of the app so that any fb user can use it
+
+#### Initially app cannot be used by normal users, It needs to be authorized by facebook before deploying fully online the process will take time,hence for now it works only on my two accounts with fb developer keys, I will apply for autherisation of the app so that any fb user can use it.
+
+-
 
 
 
