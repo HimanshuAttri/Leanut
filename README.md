@@ -19,8 +19,8 @@ Peaople who need help and those who want to help people in need are now not requ
 
 ## Technology Used
 
-DialogFlow- For the bot logics and facebook messenger connection
-Heroku server - For users connection. the nodejs structure which is connecting two users on their request anonymously
+### DialogFlow- For the bot logics and facebook messenger connection
+### Heroku server - For users connection. the nodejs structure which is connecting two users on their request anonymously
 
 
 
@@ -85,7 +85,7 @@ if user wants to help he will say 'yes' to get connected
 
 ![y2](https://user-images.githubusercontent.com/12981490/31616930-a8381dec-b2ab-11e7-9e7f-aa180d288c37.png)
 
-##Works to be done
+## Works to be done
 
 -removing '/r' operations with a normal send
 
