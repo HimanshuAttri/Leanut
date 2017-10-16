@@ -50,18 +50,10 @@ if user wants to help he will say 'yes' to get connected
 ![lean5](https://user-images.githubusercontent.com/12981490/31587415-18d94bdc-b1ff-11e7-9432-769e666bdc0a.png)
 
 ### Now both are connected 
-
-![lean6](https://user-images.githubusercontent.com/12981490/31587416-195e53b8-b1ff-11e7-8833-25e918388f2b.png)
-
-
-For the time being if users want to send message to each other the '/r' should be used in the begaining of the message
-
-![leanx](https://user-images.githubusercontent.com/12981490/31587686-a2b3b438-b203-11e7-8926-63168e9278e6.png)
-
-![uu2](https://user-images.githubusercontent.com/12981490/31615806-6ece8a94-b2a8-11e7-9c09-17b62ba8b2a7.png)
+![y1](https://user-images.githubusercontent.com/12981490/31616926-a764d6b2-b2ab-11e7-98d5-0a1854500590.png)
 
 
-![uu1](https://user-images.githubusercontent.com/12981490/31615803-6d6b46a6-b2a8-11e7-9d94-7992f5495b7e.png)
+![y2](https://user-images.githubusercontent.com/12981490/31616930-a8381dec-b2ab-11e7-9e7f-aa180d288c37.png)
 
 ##Works to be done
 
